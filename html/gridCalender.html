@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modalStyle.css">
+    <title>Calender</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html" id="userWelcome">Edgar's Calendar</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="gridCalender.html">Calendar</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!--<div class="container-fluid" id="userForm">-->
+    <!--<div class="row">-->
+        <!--<div class="col-sm-2">-->
+        <!--</div>-->
+        <!--<div class="col-sm-8 centered formBorder">-->
+            <!--<label for="userN">UserName</label>-->
+            <!--<input type="text" id="userN">-->
+            <!--<label for="pass">Password:</label>-->
+            <!--<input type="password" id="pass">-->
+            <!--<div class="alert alert-danger hide" id="errorMessage">-->
+                <!--<strong>Invalid userName and/or password!</strong> Please try again.-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<button class="btn btn-info" onclick="postNamePass()">Click to send</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-sm-2 buttonRight" style="text-align: left">-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--startModal-->
+<div class="container-fluid">
+<div class="overlay is-hidden" id="overlay">
+    <div class="modal-content">
+        <span class="button-close" onclick="closeModal();"></span>
+        <div class="modalHeader">
+            <p id="modalHeader" class="centered"></p>
+        </div>
+
+        <div class="row centered">
+            <!--<h3 id="modalHour" >Click on hour to add events</h3>-->
+
+            <div id="modalInput" class=" eventInput">
+                <!--<h3 id="modalHour"></h3>-->
+                <h3 id="modalHour" >Click on hour to add events</h3>
+
+                <input type="text" id="modalInputText" placeholder="Add Event" width="60">
+                <button id="saveButton" class="btn btn-info" onclick="saveEvent()">Save <i class="fa fa-file"></i></button>
+            </div>
+             <div class="col-sm-4">
+              <ul id="unList1" class="nav nav-pills nav-stacked">
+                </ul>
+             </div>
+            <div class="col-sm-4">
+              <ul id="unList2" class="nav nav-pills nav-stacked">
+                </ul>
+             </div>
+            <div class="col-sm-4">
+                <ul id="unList3" class="nav nav-pills nav-stacked">
+                </ul>
+            </div>
+        </div>
+        <div id="modalEvents" class=" eventDiv">
+            <p>Events:</p>
+            <ol id="modalList">
+            </ol>
+        </div>
+        <!--<div id="modalInput" class="row centered modal-header hide">-->
+                <!--<h3 id="modalHour"></h3>-->
+           <!--<input type="text" id="modalInputText" placeholder="Add Event" width="60">-->
+            <!--<button class="btn btn-info" onclick="saveEvent()">Save <i class="fa fa-file" aria-hidden="true"></i></button>-->
+        <!--</div>-->
+
+    </div>
+</div>
+</div>
+<!--endModal-->
+<div id="tableContainer" class="container tableColor ">
+    <!--<div id="tableContainer" class="container tableColor ">-->
+    <div class="centered">
+        <h1  class="monthHeading" id="monthId"></h1>
+        <!--<h1 style="visibility: hidden;" class="monthHeading" id="monthId2"></h1>-->
+    </div>
+    <div class="table-responsive" id="tableDiv">
+        <!--My table created with js will go here-->
+        <!--**************************************-->
+    </div>
+
+    <div id="buttonSelect" class="row">
+        <div class="col-sm-4">
+            <button class="btn btn-success" onclick="prevMonth()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous Month</button>
+        </div>
+        <div class="col-sm-4 centered">
+            <div class="whiteFont" id="userTimeNear"><h1></h1></div>
+            <!--<button class="btn btn-danger" onclick="clearLocalStorage()">Clear Local Storage</button>-->
+        </div>
+        <div class="col-sm-4 buttonRight">
+            <button class="btn btn-success"  onclick="nextMonth()">Next Month <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+
+</nav>
+<script src="../js/ControllerView.js"></script>
+<script src="../js/model.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/formAjax.js"></script>
+<script src="../js/getJSON.js"></script>
+
+
+
+
+</body>
+</html>

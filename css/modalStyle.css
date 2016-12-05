@@ -1,0 +1,144 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.center { text-align: center; }
+
+.is-hidden { display: none; }
+
+.button {
+    letter-spacing: -0.5px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    background: #e3e3e3;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #999;
+}
+
+.button:hover {
+    border-bottom-width: 1px;
+    margin-top: 3px;
+}
+
+.button-primary {
+    background: #3498db;
+    color: #fff;
+}
+
+.button-close {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAowAAAKMB8MeazgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAB5SURBVDiNrZPRCcAwCEQfnUiySAZuF8kSWeH6Yz8KrQZMQAicJ+epAB0YwAmYJKIADLic0/GPPCbQAnLznCd/4NWUFfkgy1VjH8CryA95ApYltAiTRCZxpuoW+gz9WXE6NPeg+ra1UDIxGlWEObe4SGxY5fIxlc75Bkt9V4JS7KWJAAAAAElFTkSuQmCC59ef34356faa7edebc7ed5432ddb673d');
+}
+
+.page-title { font-weight: 300; }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index:9999
+}
+
+.modal-content {
+    padding: 20px 30px;
+    width: 500px;
+    position: relative;
+    min-height: 300px;
+    margin: 0% auto 0;
+    background: #4893aa;
+    z-index:9999;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.8s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modalHeader {
+    /*padding: 2px 16px;*/
+    /*need to add rounded edges, kind of like the one for the form.*/
+    color: white;
+    border-radius: 25px;
+    padding-top: -20%;
+    border: 2px solid #680000;
+    background-color: #000000;
+    font-size: large;
+}
+.eventInput {
+    margin: 2% 0 1% 0;
+
+    color: white;
+    border-radius: 10px;
+    border: 5px solid #0a414f;
+    background-color: #0e5a6d;
+
+}
+.eventDiv {
+    margin: 2% 0 1% 0;
+
+    color: white;
+    border-radius: 5px;
+    border: 5px solid #0a414f;
+    background-color: #0e5a6d;
+    padding-top: -10%;
+
+}
+#saveButton{
+    margin-bottom: 3%;
+}
+
+.deleteBtn {
+    margin-left: 10%;
+    -moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+    -webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+    background-color:#e4685d;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    border:1px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:1px 8px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #b23e35;
+}
+.deleteBtn:hover {
+    background-color:#eb675e;
+}
+.deleteBtn:active {
+    position:relative;
+    top:1px;
+}
