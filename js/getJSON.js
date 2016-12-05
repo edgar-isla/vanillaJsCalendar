@@ -2,7 +2,7 @@
 
 function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
-    xobj.open('GET', '../JSON/model.json', true);
+    xobj.open('GET', 'vanillaJsCalendar/JSON/model.json', true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             callback(xobj.responseText);
