@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Calender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="html/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index2.html">Edgar's Calendar</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index2.html">Home</a></li>
+            <li class="hide" id="calendarButton"><a href="html/gridCalender.html">Calendar</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container-fluid" id="userForm">
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8 centered formBorder">
+            <label for="userN">UserName</label>
+            <input type="text" id="userN">
+            <label for="pass">Password:</label>
+            <input type="password" id="pass">
+            <div class="alert alert-danger hide" id="errorMessage">
+                <strong>Invalid userName and/or password!</strong> Please try again.
+            </div>
+            <div>
+                <button class="btn btn-info" onclick="postNamePass()">Log In</button>
+            </div>
+        </div>
+        <div class="col-sm-2 buttonRight" style="text-align: left">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4 centered">
+            <h1>My Calender Project</h1><br>
+
+        </div>
+        <div class="col-sm-4 buttonRight">
+            <br>
+            <div class="row centered"><h4>By Edgar Isla-Navarro</h4></div>
+            <div class="row centered"><h4>CS 2550</h4></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<div class="container-fluid centered">
+    <div  class="row centered">
+        <!--<div class="col-sm-6 descriptionDivs alignLeft" >-->
+            <!--<h1>Description</h1>-->
+            <!--<br>-->
+            <!--<h3>User will be able to:</h3>-->
+            <!--<ul>-->
+                <!--<li>View full month calender.</li>-->
+                <!--<li>Switch between months </li>-->
+                <!--<li>Add events to any day of the month</li>-->
+                <!--<li> If there are events for particular day. They will show up in the full month calender.</li>-->
+                <!--<li>When adding an event, a new window with a table for the particular day will show up.</li>-->
+                <!--<li>Be able to edit and erase previous events.</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="col-sm-6 descriptionDivs">-->
+                <!--<h1>Preliminary Software Design</h1>-->
+                <!--<h2>Model</h2>-->
+
+            <!--<p>A placeholder for user input.  This will be events in the calender.  example: document.getElementById("userInput").value= myStorageVar;</p>-->
+                <!--<button class="btn btn-success " onclick="location.href = 'html/gridCalender.html';">View My Calender (Separate Window)</button>-->
+
+        <!--</div>-->
+        <div class="col-sm-12 descriptionDivs">
+            <h1></h1>
+            <h2>Logic</h2>
+
+            <p>*User is able to click on specific day. done</p>
+            <p>*User is able to click on a specific hour to add event. done</p>
+            <p>*User is able to save (console log for now). done</p>
+            <p>*Store in the future input and date of events in local memory or cookies.</p>
+            <p>*Figure out how to clear table and when changing months put the correct date in each cell.</p>
+            <p>*Be able to not only present current year but previous and forthcoming years</p>
+            <p>*Be  able to inform the user how if he was current events that are coming up.</p>
+            <!--<button class="btn btn-success " onclick="location.href = 'html/gridCalender.html';">View My Calender (Separate Window)</button>-->
+
+        </div>
+
+    </div>
+</div>
+
+<script src="js/formAjax.js"></script>
+
+</body>
+</html>
